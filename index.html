@@ -1,85 +1,80 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Last Power RP - سيرفر فايف ام</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأدلة والتسجيلات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-      <nav>
-          <div class="logo">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-TXllscAZUkZbqlH5CS7O67ApVhi7wQ.gif" alt="Last Power Logo">
-          </div>
-          <ul class="nav-links">
-              <li><a href="index.html" class="active">الرئيسية</a></li>
-              <li><a href="rules.html">القوانين</a></li>
-              <li><a href="store.html">المتجر</a></li>
-              <li><a href="https://discord.gg/lp1" target="_blank">ديسكورد</a></li>
-          </ul>
-      </nav>
-  </header>
+    <div class="main-container">
+        <div class="content-wrapper">
+            <!-- Header -->
+            <h1 class="main-title">الأدلة والتسجيلات</h1>
 
-  <main>
-      <section class="hero">
-          <div class="hero-content">
-              <h1>مرحباً بكم في <span class="highlight">LAST POWER</span></h1>
-              <p>انضم إلى مجتمعنا المميز في لعب الأدوار على منصة FiveM</p>
-              <div class="cta-buttons">
-                  <a href="#connect" class="btn primary">اتصل بالسيرفر</a>
-                  <a href="https://discord.gg/lp1" target="_blank" class="btn secondary">انضم للديسكورد</a>
-              </div>
-          </div>
-      </section>
+            <!-- Audio Recording Section -->
+            <div class="section-card">
+                <h2 class="section-title">التسجيل هنا</h2>
 
-      <section class="features">
-          <h2>مميزات السيرفر</h2>
-          <div class="features-grid">
-              <div class="feature-card">
-                  <h3>نظام اقتصادي متكامل</h3>
-                  <p>نظام مالي متطور مع وظائف متنوعة وفرص استثمار</p>
-              </div>
-              <div class="feature-card">
-                  <h3>مجتمع نشط</h3>
-                  <p>مجتمع عربي نشط مع إدارة متفاعلة على مدار الساعة</p>
-              </div>
-              <div class="feature-card">
-                  <h3>تحديثات مستمرة</h3>
-                  <p>تحديثات وإضافات جديدة بشكل دوري لتحسين تجربة اللعب</p>
-              </div>
-          </div>
-      </section>
-  </main>
+                <audio id="audioPlayer" style="display: none;">
+                    <source src="lp.mp3" type="audio/mpeg">
+                    متصفحك لا يدعم تشغيل الملفات الصوتية
+                </audio>
 
-  <footer>
-      <div class="footer-content">
-          <div class="footer-logo">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-TXllscAZUkZbqlH5CS7O67ApVhi7wQ.gif" alt="Last Power Logo">
-          </div>
-          <div class="footer-links">
-              <h4>روابط سريعة</h4>
-              <ul>
-                  <li><a href="rules.html">القوانين</a></li>
-                  <li><a href="store.html">المتجر</a></li>
-                  <li><a href="#support">الدعم الفني</a></li>
-              </ul>
-          </div>
-          <div class="social-links">
-              <h4>تواصل معنا</h4>
-              <div class="social-icons">
-                  <a href="https://discord.gg/lp1" target="_blank">Discord</a>
-                  <a href="https://www.tiktok.com/@e3xg">Tiktok</a>
-                  <a href="#instagram">Instagram</a>
-              </div>
-          </div>
-      </div>
-      <div class="footer-bottom">
-          <p>جميع الحقوق محفوظة &copy; 2025 Last Power RP</p>
-      </div>
-  </footer>
+                <!-- Audio Controls -->
+                <div class="audio-controls">
+                    <button id="playPauseBtn" class="play-button">
+                        <span class="button-icon">▶️</span>
+                        <span class="button-text">تشغيل التسجيل</span>
+                    </button>
+
+                    <!-- Timeline -->
+                    <div class="audio-timeline">
+                        <!-- Time Display -->
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span>
+                            <span id="totalTime">0:00</span>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="progress-container" id="progressContainer">
+                            <!-- Progress Fill -->
+                            <div class="progress-fill" id="progressFill"></div>
+                            <!-- Progress Handle -->
+                            <div class="progress-handle" id="progressHandle"></div>
+                        </div>
+
+                        <!-- Percentage Display -->
+                        <div class="percentage-display">
+                            <span id="percentageText">0% مكتمل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="section-card">
+                <h2 class="section-title">الفيديو التوضيحي</h2>
+
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/Fydjg0eloso"
+                        title="Evidence Video"
+                        class="video-iframe"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Footer Note -->
+            <div class="footer-note">
+                <p>هذه الصفحة تحتوي على الأدلة والتسجيلات المتعلقة بالموقف</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
